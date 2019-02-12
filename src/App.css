@@ -1,32 +1,381 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Anton|Lobster|Roboto+Condensed|Staatliches');
+/*
+Use fonts like this:
+font-family: 'Roboto Condensed', sans-serif;    | For normal text
+font-family: 'Anton', sans-serif;               | Good headline font
+font-family: 'Staatliches', cursive;            | Good headline font  
+font-family: 'Lobster', cursive;                | A cursive, almost handwritten font
+*/
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
+.app-wrapper {
+  width: calc(100vw-(100%-100vw));
+  height: auto;
   min-height: 100vh;
+  background-color: pink;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+*:focus {
+  outline-style: none;
+}
+h1,h2,h3,h4 {
+  font-family: 'Staatliches', cursive;  
+}
+em {
+  font-family: 'Lobster', cursive;
+  font-size: 12px;
+  color: grey;
+  align-self: flex-end;
+}
+    /*|--NAVIGATION--|*/
+#navbar-container {
+  padding: 0 25px;
+  width: 100%;
+  height: 70px;
+  background-color: #a10b00;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  border-bottom: 5px solid #fdde4a; 
+}
+.navbar-left{
+height: 100%;
+width: 50%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+box-sizing: border-box;
+}
+.navbar-right{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  }
+.nav-logo{
+  width: 15%;
+}
+
+.nav-social-media {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.nav-social-media > a {
+  height: 40px;
+  width: 40px;
+}
+.nav-social-media > img {
+  height: 40px;
+  box-sizing: border-box;
+}
+.nav-links {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin-right: 50px;
+}
+.nav-link {
+  height: 100%;
+  width: auto;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+  font-family: 'Staatliches', cursive;  
+}
+.nav-link > img {
+  width: 40px;
+}
+/*fixed-main-content -- Height is fixed to be 100vh and no scroll*/
+.main-container-fixed{
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.main-inner-left-container-fixed, .main-inner-right-container-fixed .main-inner-left-container-fixed-login-component {
+  width: 50%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+    /*|--LOGIN--|*/
+.main-inner-left-container-fixed-login-component {
+  height: 100vh;
+  width: 50%;
+  background-image: url("./Images/login-image.png");
+  background-size: cover;
+  background-repeat: none;
+}
+.image-filter {
+  background-color: rgba(18, 18, 91, 0.5);
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.main-inner-right-container-fixed {
+  width: 50%;
+  height: 100vh;
+  background-color: #12125b;;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-inner-right-inner-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-inner-right-inner-container > img {
+  height: 150px;
+  margin: 0;
+  padding: 0;
+}
+.main-inner-right-inner-container > form {
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  min-height: 30%;
+  max-height:70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.login-input {
+  margin: 0;
+  height: 35px;
+  width: 26%;
+  padding: 2px 7px;
+  background-color: #fdde4a;
+  color: white;
+  border: solid 0.5px whitesmoke;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.login-input > ::placeholder{
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+ .login-button{
+  background-color: #a10b00;
+  width: 15%;
+  height: 35px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.login-button:hover {
+  cursor: pointer;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-container-fixed-with-navbar{
+  overflow: hidden;
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.main-inner-left-container-fixed-events-component {
+  height: 100%;
+  width: 50%;
+  background-image: url("./Images/events-ng.png");
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+  overflow:hidden;
+}
+.main-inner-right-container-fixed-events-component {
+  width: 50%;
+  min-height: 100%;
+  background-color: #12125b;;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/*main-content that is not fixed in height*/
+.main-container{
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.main-inner-left-container{
+  min-height: 100%;
+  width: 50%;
+  background-color: black;
+  background-image: url("./Images/vgk-logo.png");
+  background-size: 180%;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.main-inner-right-container{
+  background-color: #12125b;
+  min-height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-inner-right-container-home-component{
+  background-color: white;
+  width: 80%;
+  padding: 50px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+/* Calendar */
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 75%;
+}
+.calendar-header{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(214, 26, 12, 0.8);
+}
+.calendar-body-div{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.calendar-day-headline{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(214, 26, 12, 0.8);
+  border-bottom: #fdde4a 2px solid;
+}
+.calendar-day-headline > p {
+  width: 14.2857142%;
+  text-align: center;
+  color: white;
+}
+.calendar-dates-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(18, 18, 91, 0.8);
+}
+.weekday {
+  width: 14.2857142%;
+  height: auto;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.calendar-date-div{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.calendar-date-div:hover {
+  cursor: pointer;
+  background-color: rgba(214, 26, 12, 0.65);
+}
+.calendar-date-div > p {
+  text-align: center;
+  color: white;
+}
+.calendar-no-date-div{
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.calendar-no-date-div > p {
+  text-align: center;
+  height: 30px;
+  font-size: 0.5px;
 }

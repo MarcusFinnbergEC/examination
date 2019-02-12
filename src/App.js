@@ -1,28 +1,47 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import { connect } from 'react-redux';
+import Home from "./Components/home";
+import Login from "./Components/login";
+import Events from "./Components/events";
+import Roster from "./Components/roster";
+import News from "./Components/news";
+import Equipment from "./Components/equipment";
+import Contact from "./Components/contact";
+import ErrorPage from "./Components/errorpage";
+import Navigation from "./Components/navigation";
+import { Redirect } from 'react-router-dom';
+
+const directus = 'https://localhost'
 
 class App extends Component {
   render() {
+    if(!this.props.user.signedIn) {
+      return <Login />
+    }
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+      <div className="app-wrapper">
+        {this.props.user.signedIn ? <Navigation /> : ''}
+        <Switch>
+          <Route path="/home" component={Home}/>
+          <Route path="/" component={Login} exact/>
+          <Route path="/events" component={Events}/>
+          <Route path="/roster" component={Roster}/>
+          <Route path="/news" component={News}/>
+          <Route path="/equipment" component={Equipment}/>
+          <Route path="/contact" component={Contact}/>
+          <Route component={ErrorPage} />
+        </Switch>
+        </div>
+      </BrowserRouter> 
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  user: state.userReducer
+})
+
+export default connect(mapStateToProps)(App);
