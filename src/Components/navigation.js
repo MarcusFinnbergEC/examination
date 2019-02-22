@@ -4,13 +4,11 @@ import Facebook from "../Images/flogo-RGB-HEX-Blk-72.svg";
 import Logo from "../Images/vgk-logo.png";
 import { connect } from 'react-redux';
 import { loginAction } from '../Redux/Actions/userActions';
+import { cleanCalenderAction } from '../Redux/Actions/calendarActions';
 
 class Navigation extends Component {
-    /*console.log('navloc', window.location.pathname)
-    if(window.location.pathname.includes('/login')) {
-        return (<div></div>)
-    }*/
 logout(){
+        this.props.dispatch(cleanCalenderAction());
         this.props.dispatch(loginAction({signedIn: false}));
 }
 

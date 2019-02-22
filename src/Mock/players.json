@@ -1,0 +1,130 @@
+{
+    "players": [
+        {
+            "name":"Marcus Finnberg",
+            "number":"59",
+            "position":"LD",
+            "role":"defense",
+            "youthTeams":["Åstorp Grizzlys"]
+        },
+        {
+            "name":"Filip Karlsson",
+            "number":"10",
+            "position":"RW",
+            "role":"forward",
+            "youthTeams":["Helsingborg HC", "Landskrona HC", "Åstorp Grizzlys"]
+        },
+        {
+            "name":"Rolf Hamark",
+            "number":"5",
+            "position":"RD",
+            "role":"defense",
+            "youthTeams":["none"]
+        },
+        {
+            "name":"Daniel Bodström",
+            "number":"1",
+            "position":"G",
+            "role":"goalie",
+            "youthTeams":["Järpen HC"]
+        },
+        {
+            "name":"Lappen",
+            "number":"30",
+            "position":"G",
+            "role":"goalie",
+            "youthTeams":["Helsingborg HC", "Norrlands Guld A-lag"]
+        },
+        {
+            "name":"Fredrik Karlsson",
+            "number":"47",
+            "position":"RD",
+            "role":"defense",
+            "youthTeams":["Helsingborg HC", "Landskrona HC", "Åstorp Grizzlys", "Trollhättan HC"]
+        },
+        {
+            "name":"Mikael Hafström",
+            "number":"11",
+            "position":"LW",
+            "role":"forward",
+            "youthTeams":["Helsingborg HC"]
+        },
+        {
+            "name":"Ezequiel Huaman Alacron",
+            "number":"86",
+            "position":"C",
+            "role":"forward",
+            "youthTeams":["none"]
+        },
+        {
+            "name":"Lars Hamark",
+            "number":"99",
+            "position":"C",
+            "role":"forward",
+            "youthTeams":["none"]
+        },
+        {
+            "name":"Daniel Lantz",
+            "number":"6",
+            "position":"RD",
+            "role":"defense",
+            "youthTeams":["Helsingborg HC"]
+        },
+        {
+            "name":"Marcus Larsson",
+            "number":"16",
+            "position":"LW",
+            "role":"forward",
+            "youthTeams":["Helsingborg HC"]
+        },
+        {
+            "name":"Josef Jönsson",
+            "number":"65",
+            "position":"LW",
+            "role":"forward",
+            "youthTeams":["Växjö Lakers"]
+        },
+        {
+            "name":"Jonas Synnelius",
+            "number":"12",
+            "position":"LD",
+            "role":"defense",
+            "youthTeams":["Djurgården"]
+        },
+        {
+            "name":"Roger Hallberg",
+            "number":"26",
+            "position":"RD",
+            "role":"defense",
+            "youthTeams":["Frosta HC", "Tyringe SoSS", "Åstorp Grizzlys"]
+        },
+        {
+            "name":"Johnny Lundahl",
+            "number":"66",
+            "position":"LD",
+            "role":"defense",
+            "youthTeams":["none"]
+        },
+        {
+            "name":"Calle Klintvik",
+            "number":"19",
+            "position":"LW",
+            "role":"forward",
+            "youthTeams":["Helsingborg HC", "Landskrona HC"]
+        },
+        {
+            "name":"Andreas Fellin",
+            "number":"22",
+            "position":"RW",
+            "role":"forward",
+            "youthTeams":["none"]
+        },
+        {
+            "name":"Fabian Brunnström",
+            "number":"96",
+            "position":"RW",
+            "role":"forward",
+            "youthTeams":["Helsingborg HC", "Rögle BK", "Jonstorp IF", "Frölunda", "Malmö Redhawks", "Färjestad BK", "Dallas Stars", "Detroit Red Wings"]
+        }
+    ]
+    }

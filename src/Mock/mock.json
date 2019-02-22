@@ -1,0 +1,106 @@
+{
+"events": [
+{
+    "eventId":1,
+    "date":"2 februari, 2019",
+    "eventType": "Practice",
+    "timeFrom":"21:45:00",
+    "timeTo":"22:45:00",
+    "location":"Olympiarinken, Helsingborg (A-hallen)",
+    "addInfo":"Ses en timme innan vi går på is för genomgång",
+    "invitedUsers": [
+        {
+            "name":"Marcus Finnberg",
+            "coming":"no-reply"
+        },
+        {
+            "name":"Filip Karlsson",
+            "coming":"yes"
+        },
+        {
+            "name":"Rolf Hamark",
+            "coming":"no-reply"
+        },
+        {
+            "name":"Daniel Bodström",
+            "coming":"no"
+        },
+        {
+            "name":"Mikael Hafström",
+            "coming":"yes"
+        },
+        {
+            "name":"Roger Hansson",
+            "coming":"no-reply"
+        },
+        {
+            "name":"Staffan Andersson",
+            "coming":"no"
+        },
+        {
+            "name":"Calle Klintvik",
+            "coming":"yes"
+        },
+        {
+            "name":"Marcus Larsson",
+            "coming":"yes"
+        },
+        {
+            "name":"Daniel Lantz",
+            "coming":"yes"
+        }
+    ]
+},
+{
+    "eventId":2,
+    "date":"24 februari, 2019",
+    "eventType": "Practice",
+    "timeFrom":"10:45:00",
+    "timeTo":"11:45:00",
+    "location":"Olympiarinken, Helsingborg (A-hallen)",
+    "addInfo":"Ses en timme innan vi går på is för genomgång",
+    "invitedUsers": [
+        {
+            "name":"Marcus Finnberg",
+            "coming":"yes"
+        },
+        {
+            "name":"Filip Karlsson",
+            "coming":"yes"
+        },
+        {
+            "name":"Rolf Hamark",
+            "coming":"yes"
+        },
+        {
+            "name":"Daniel Bodström",
+            "coming":"no"
+        },
+        {
+            "name":"Mikael Hafström",
+            "coming":"yes"
+        },
+        {
+            "name":"Roger Hansson",
+            "coming":"no-reply"
+        },
+        {
+            "name":"Staffan Andersson",
+            "coming":"no"
+        },
+        {
+            "name":"Calle Klintvik",
+            "coming":"yes"
+        },
+        {
+            "name":"Marcus Larsson",
+            "coming":"yes"
+        },
+        {
+            "name":"Daniel Lantz",
+            "coming":"yes"
+        }
+    ]
+}
+]
+}

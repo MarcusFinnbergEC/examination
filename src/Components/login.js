@@ -3,14 +3,35 @@ import Logo from "../Images/vgk-logo.png";
 import { loginAction } from "../Redux/Actions/userActions";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
+import DirectusSDK from "@directus/sdk-js";
 
+/*const client = new DirectusSDK();
 
+console.log("CLIENT: ", client)
+client.login({
+    url: "http://localhost",
+    project: "_",
+    email: "marcus.finnberg@outlook.com",
+    password: "B4nanL4x112!",
+    storage: window.localStorage
+  });
+console.log("login");
+console.log("localStorage: ", localStorage);
+*/
+/*const API = "http://localhost/_"
+const DEFAULT_QUERY = "/items/users";*/
 
 class Login extends Component {
     userInfo = {
         email: "",
         password: ""
     }
+    
+    /*componentDidMount() {
+        fetch(API + DEFAULT_QUERY)
+          .then(response => response.json())
+          .then(data => console.log(data));
+      }*/
     userLogin(e){
         console.log("props:",this.props);
         e.preventDefault();
@@ -31,7 +52,6 @@ class Login extends Component {
     }
     }
     render() {
-        console.log("login");
         return (
             <div className="main-container-fixed">
             {!this.props.user.signedIn ? '' : this.redirect()}
@@ -55,7 +75,7 @@ class Login extends Component {
     } 
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => ( console.log("UserReducer: ", state),{
     user: state.userReducer
 })
 

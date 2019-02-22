@@ -1,18 +1,17 @@
 import React from "react";
 import { months, weekday } from "../Logic/logic-calendar";
 
-const Calendar = () => {
-    console.log(months);
+const Calendar = (props) => {
     let today = new Date();
     let dd = today.getDate();
     let mm = today.getMonth();
     let yyyy = today.getFullYear();
 
-    let todaysDate = dd;
     let activeMonth = mm;
     let activeYear = yyyy;
-
     let month = months[activeMonth].month;
+    let todaysDate = `${dd} ${month}, ${yyyy}`;
+    console.log("Dagens datum: ",todaysDate)
 
     function nextMonth() {
         activeMonth++;
@@ -20,7 +19,8 @@ const Calendar = () => {
             activeMonth = 0;
             activeYear++
         }
-        console.log(activeMonth, activeYear);
+        month = months[activeMonth].month;
+        console.log(activeMonth, activeYear, month);
     }
 
     function previousMonth() {
@@ -29,7 +29,8 @@ const Calendar = () => {
             activeMonth = 11;
             activeYear--
         }
-        console.log(activeMonth, activeYear);
+        month = months[activeMonth].month;
+        console.log(activeMonth, activeYear, month);
     }
 
     function daysInMonth (month, year) {
@@ -42,11 +43,11 @@ const Calendar = () => {
 
     for(let i = 0; i < length; i++) {
         let date = i+1;
-        let setDate = new Date(`${activeMonth+1} ${date}, ${activeYear} 15:00:01`);
+        let setDate = new Date(`${activeMonth+1} ${date}, ${activeYear}`);
         let whatDay = weekday[setDate.getDay()];
         days.push({date: date, day:whatDay.day});
     }
-
+    console.log("DAYSDAYS:",days)
     let daysReversed = days;
 
     let monthMondays = [];
@@ -58,44 +59,44 @@ const Calendar = () => {
     let monthSundays = [];
     days.map(i => {
         if (i.day.includes("monday")){
-            let thisDay = <div className="calendar-date-div"><p>{i.date}</p></div>;
+            let thisDay = <div className="calendar-date-div" key={i.date} data-date={`${i.date} ${month}, ${activeYear}`} onClick={(date) => props.pickDate(date)}><p>{i.date}</p></div>;
             return (
                 monthMondays.push(thisDay)
             )
         }
         else if (i.day.includes("tuesday")){
-            let thisDay = <div className="calendar-date-div"><p>{i.date}</p></div>;
+            let thisDay = <div className="calendar-date-div" key={i.date} data-date={`${i.date} ${month}, ${activeYear}`} onClick={(date) => props.pickDate(date)}><p>{i.date}</p></div>;
             return (
                 monthTuesdays.push(thisDay)
             )
         }
         else if (i.day.includes("wednesday")){
-            let thisDay = <div className="calendar-date-div"><p>{i.date}</p></div>;
+            let thisDay = <div className="calendar-date-div" key={i.date} data-date={`${i.date} ${month}, ${activeYear}`} onClick={(date) => props.pickDate(date)}><p>{i.date}</p></div>;
             return (
                 monthWednesdays.push(thisDay)
             )
         }
         else if (i.day.includes("thursday")){
-            let thisDay = <div className="calendar-date-div"><p>{i.date}</p></div>;
+            let thisDay = <div className="calendar-date-div" key={i.date} data-date={`${i.date} ${month}, ${activeYear}`} onClick={(date) => props.pickDate(date)}><p>{i.date}</p></div>;
             return (
                 monthThursdays.push(thisDay)
             )
         }
         else if (i.day.includes("friday")){
-            let thisDay = <div className="calendar-date-div"><p>{i.date}</p></div>;
+            let thisDay = <div className="calendar-date-div" key={i.date} data-date={`${i.date} ${month}, ${activeYear}`} onClick={(date) => props.pickDate(date)}><p>{i.date}</p></div>;
             return (
                 monthFridays.push(thisDay)
             )
         }
 
         else if (i.day.includes("saturday")){
-            let thisDay = <div className="calendar-date-div"><p>{i.date}</p></div>;
+            let thisDay = <div className="calendar-date-div" key={i.date} data-date={`${i.date} ${month}, ${activeYear}`} onClick={(date) => props.pickDate(date)}><p>{i.date}</p></div>;
             return (
                 monthSaturdays.push(thisDay)
             )
         }
         else {
-            let thisDay = <div className="calendar-date-div"><p>{i.date}</p></div>;
+            let thisDay = <div className="calendar-date-div" key={i.date} data-date={`${i.date} ${month}, ${activeYear}`} onClick={(date) => props.pickDate(date)}><p>{i.date}</p></div>;
             return (
                 monthSundays.push(thisDay)
             )

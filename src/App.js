@@ -11,9 +11,8 @@ import Equipment from "./Components/equipment";
 import Contact from "./Components/contact";
 import ErrorPage from "./Components/errorpage";
 import Navigation from "./Components/navigation";
-import { Redirect } from 'react-router-dom';
 
-const directus = 'https://localhost'
+const directus = 'http://localhost/admin'
 
 class App extends Component {
   render() {

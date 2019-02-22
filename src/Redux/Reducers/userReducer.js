@@ -8,15 +8,14 @@ export default (state = initialState, action) => {
         case 'USER_LOGGED_IN':
             return {
                 ...state,
-                result: action.payload, signedIn: true
+                result: action.payload, 
+                signedIn: true
         }
         case 'USER_LOGGED_OUT':
             return {
                 signedIn: false
         }
         default:
-            return {
-                signedIn: false
-        }
+            return state
     }
 }
